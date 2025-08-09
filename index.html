@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Hub - Futuristic Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(-45deg, #ff00c8, #6a00f4, #00ffe7, #ff6600);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            color: white;
+        }
+        
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        header {
+            text-align: center;
+            padding: 50px 20px 20px 20px;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+        
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .search-container input {
+            padding: 10px 15px;
+            width: 300px;
+            max-width: 80%;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            flex: 1;
+        }
+        
+        .card {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .card h3 {
+            margin-top: 10px;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .card:hover h3 {
+            color: #00ffe7;
+        }
+        
+        .card:hover {
+            transform: rotateY(5deg) rotateX(5deg) scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 0, 200, 0.7), 0 0 35px rgba(0, 255, 231, 0.5);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🚀 Job Hub </h1>
+        <p>One stop Solution For SErching jobs</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search job portals..." onkeyup="filterCards()">
+    </div>
+    <main>
+        <div class="grid" id="jobGrid">
+            <!-- Existing -->
+            <a href="https://www.naukri.com" target="_blank" class="card">
+                <img src="images/naukri.jpg" alt="Naukri">
+                <h3>Naukri</h3>
+            </a>
+            <a href="https://www.indeed.com" target="_blank" class="card">
+                <img src="images/indeed.jpg" alt="Indeed">
+                <h3>Indeed</h3>
+            </a>
+            <a href="https://www.linkedin.com/jobs" target="_blank" class="card">
+                <img src="images/linkdin.jpg" alt="LinkedIn">
+                <h3>LinkedIn Jobs</h3>
+            </a>
+            <a href="https://www.monsterindia.com" target="_blank" class="card">
+                <img src="banners/monster.jpg" alt="Monster">
+                <h3>Monster India</h3>
+            </a>
+
+            <!-- New additions -->
+            <a href="https://freshersjobs24.com/" target="_blank" class="card">
+                <img src="images/Screenshot 2025-08-09 075509.png" alt="Freshers Jobs 24">
+                <h3>Freshers Jobs 24</h3>
+            </a>
+            <a href="https://fresherjobsindia.com/" target="_blank" class="card">
+                <img src="banners/fresherjobsindia.jpg" alt="Fresher Jobs India">
+                <h3>Fresher Jobs India</h3>
+            </a>
+            <a href="https://freshersrecruitment.co.in/" target="_blank" class="card">
+                <img src="banners/freshersrecruitment.jpg" alt="Freshers Recruitment">
+                <h3>Freshers Recruitment</h3>
+            </a>
+            <a href="https://jobsnet.in/" target="_blank" class="card">
+                <img src="images/" alt="Jobsnet">
+                <h3>Jobsnet</h3>
+            </a>
+            <a href="https://freshershunt.in/" target="_blank" class="card">
+                <img src="banners/freshershunt.jpg" alt="Freshers Hunt">
+                <h3>Freshers Hunt</h3>
+            </a>
+            <a href="https://app.joinsuperset.com/" target="_blank" class="card">
+                <img src="images/superset.jpg" alt="Superset">
+                <h3>Superset</h3>
+            </a>
+            <a href="https://www.glassdoor.co.in/Job/index.htm" target="_blank" class="card">
+                <img src="images/glassdoor.wepb" alt="Glassdoor">
+                <h3>Glassdoor</h3>
+            </a>
+            <a href="https://internshala.com/" target="_blank" class="card">
+                <img src="banners/internshala.jpg" alt="Internshala">
+                <h3>Internshala</h3>
+            </a>
+            <a href="https://github.com/" target="_blank" class="card">
+                <img src="banners/github.jpg" alt="GitHub Portfolio">
+                <h3>GitHub Portfolio</h3>
+            </a>
+        </div>
+    </main>
+
+
+
+    <footer>
+        © 2025 Job Hub | Designed by Vishal
+    </footer>
+
+    <script>
+        function filterCards() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let cards = document.querySelectorAll(".card");
+            cards.forEach(card => {
+                let title = card.querySelector("h3").textContent.toLowerCase();
+                card.style.display = title.includes(input) ? "block" : "none";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
