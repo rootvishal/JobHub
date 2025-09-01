@@ -29,7 +29,8 @@ Edit
 - Background images sourced from free online libraries (Unsplash, Pexels)
 
 ## 📸 Screenshots
-*(Add your screenshots here once ready)*
+
+![JobHub Screenshot](images/jobhub banner.png)
 
 ## 📜 Installation & Usage
 1. Clone the repository:
