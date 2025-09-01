@@ -29,13 +29,13 @@ Edit
 - Background images sourced from free online libraries (Unsplash, Pexels)
 
 ## 📸 Screenshots
-![App Screenshot](images/jobhub banner.png)
+ ![App Screenshot](images/jobhub%20banner.png)
 
 
 ## 📜 Installation & Usage
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/jobhub.git
+   git clone https://github.com/rootvishal/jobhub.git
 Open index.html in your browser.
 
 Customize the content, job listings, and background images as needed.
